@@ -4,6 +4,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'texgyreadventorregular', sans-serif;
 }
 
+h1, h2 {
+	padding-bottom: 15px;
+}
+
 body {
 	background: url('/assets/concrete_wall_2.png');
 	font-family: 'cardoregular', serif;
@@ -19,10 +23,25 @@ a:hover {
 	text-decoration: none;
 }
 
+label {
+	font-family: 'texgyreadventorregular';
+	color: #777;
+}
+
+.form-actions{
+	padding-top: 15px;
+}
+
 .btn {
 	background-color: #3EDD67;
+	color: #3E6136;
 	border: none;
 	font-family: 'texgyreadventorbold';
+}
+
+.btn:hover {
+	background-color: #3E6136;
+	color: #3EDD67;
 }
 
 .navbar.navbar-inverse {
