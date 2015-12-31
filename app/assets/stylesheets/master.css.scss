@@ -1,17 +1,33 @@
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
+	font-family: 'texgyreadventorregular', sans-serif;
 }
 
 body {
 	background: url('/assets/concrete_wall_2.png');
-	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-family: 'cardoregular', serif;
+	color: #4C4B63;
 }
 
 .navbar.navbar-inverse {
-	background: url('/assets/wood_1.png');
+	background-color: #5386E4;
 	border-radius: 0;
 	box-shadow: 0 1px 3px #aaa;
+	border: none;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-family: 'texgyreadventorbold';
+}
+
+.navbar-inverse .navbar-nav li a {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+	color: #4C4B63;
 }
 
 .booyah-box {
@@ -25,4 +41,3 @@ body {
   margin-bottom: 15px;
   padding: 20px;
 }
-
