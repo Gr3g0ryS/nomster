@@ -1,5 +1,5 @@
 Nomster::Application.routes.draw do
-
+  resources :places, only: [:index]
   root 'places#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

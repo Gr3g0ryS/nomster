@@ -7,19 +7,30 @@ h1, h2, h3, h4, h5, h6 {
 body {
 	background: url('/assets/concrete_wall_2.png');
 	font-family: 'cardoregular', serif;
-	color: #4C4B63;
+	color: #000;
+}
+
+a {
+	color: #3EDD67;
+}
+
+a:hover {
+	color: #3E6136;
+	text-decoration: none;
 }
 
 .navbar.navbar-inverse {
-	background-color: #5386E4;
+	background-color: #3EDD67;
 	border-radius: 0;
 	box-shadow: 0 1px 3px #aaa;
 	border: none;
+	font-family: 'texgyreadventorregular';
+	color: #fff;
 }
 
 .navbar-inverse .navbar-brand {
-	color: #fff;
 	font-family: 'texgyreadventorbold';
+	color: #3E6136;
 }
 
 .navbar-inverse .navbar-nav li a {
@@ -27,7 +38,7 @@ body {
 }
 
 .navbar-inverse .navbar-nav li a:hover {
-	color: #4C4B63;
+	color: #3EDD67;
 }
 
 .booyah-box {
@@ -40,4 +51,8 @@ body {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+}
+
+.pagination {
+  font-family: 'texgyreadventorregular', serif;
 }
