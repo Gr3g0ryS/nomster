@@ -3,6 +3,17 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
+body {
+	background: url('/assets/concrete_wall_2.png');
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.navbar.navbar-inverse {
+	background: url('/assets/wood_1.png');
+	border-radius: 0;
+	box-shadow: 0 1px 3px #aaa;
+}
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -14,3 +25,4 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   padding: 20px;
 }
+
