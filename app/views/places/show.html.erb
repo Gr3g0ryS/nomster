@@ -33,9 +33,8 @@
 	<!-- Buttons -->    
 	<div class= "pull-right">
 		<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-	  	Add a Comment
+	  		Add a Comment
 		</button>
-		
 		<% if current_user && current_user == @place.user %>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
 		<% end %>
@@ -59,21 +58,21 @@
 			<%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
 	      </div>
 	      <div class="modal-footer">
-	        <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+	        <%= f.submit "Submit", :class => 'btn btn-primary' %>
 	      </div>
 	      <% end %>
 	    </div>
 	  </div>
 	</div>
-
 	<div class="clear"></div>
+
 	<h1>Comments</h1>
 
 	<% @place.comments.each do |comment| %>
-	<div>
+	<div class="col-xs-12 col-sm-6">
 		<blockquote>
 			<% if comment.humanized_rating.present? %>
-			<b>(<%= comment.humanized_rating %>)</b> 
+			<strong>(<%= comment.humanized_rating %>)</strong>
 			<% end %>
 			<%= comment.message %>
 			<small><%= comment.user.email %></small>
