@@ -9,7 +9,7 @@ h1, h2 {
 }
 
 body {
-	background: url('/assets/concrete_wall_2.png');
+	background-color: #ddd;
 	font-family: 'cardoregular', serif;
 	color: #000;
 }
@@ -33,15 +33,7 @@ label {
 }
 
 .btn {
-	background-color: #3EDD67;
-	color: #3E6136;
-	border: none;
 	font-family: 'texgyreadventorbold';
-}
-
-.btn:hover {
-	background-color: #3E6136;
-	color: #3EDD67;
 }
 
 .navbar.navbar-inverse {
