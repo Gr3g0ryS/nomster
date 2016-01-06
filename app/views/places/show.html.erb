@@ -90,7 +90,7 @@
 	  </div>
 	</div>
 	<div class="clear"></div>
-
+	<% if @place.photos.present? %>
 	<h1>Photos</h1>
 	<div class="row">
 		<% @place.photos.each do |photo| %>
@@ -105,7 +105,8 @@
 		</div>
 		<% end %>
 	</div>
-
+<% end %>
+<% if @place.comments.present? %>
 	<h1>Comments</h1>
 
 	<% @place.comments.each do |comment| %>
@@ -119,7 +120,7 @@
 		</blockquote>
 	</div>
 	<% end %>
-	
+	<% end %>
 
 </div>
 
