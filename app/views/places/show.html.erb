@@ -66,6 +66,11 @@
 	</div>
 	<div class="clear"></div>
 
+	<h1>Photos</h1>
+	<% @place.photos.each do |photo| %>
+		<%= photo.caption %>
+	<% end %>
+
 	<h1>Comments</h1>
 
 	<% @place.comments.each do |comment| %>
