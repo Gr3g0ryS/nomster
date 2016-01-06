@@ -32,8 +32,11 @@
 
 	<!-- Buttons -->    
 	<div class= "pull-right">
-		<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#commentModal">
 	  		Add a Comment
+		</button>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
+	  		Add a Photo
 		</button>
 		<% if current_user && current_user == @place.user %>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
@@ -45,7 +48,7 @@
 	</div>
 
 	<!-- Comment Form -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -56,6 +59,27 @@
 	      <div class="modal-body">			
 			<%= f.input :message %>
 			<%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
+	      </div>
+	      <div class="modal-footer">
+	        <%= f.submit "Submit", :class => 'btn btn-primary' %>
+	      </div>
+	      <% end %>
+	    </div>
+	  </div>
+	</div>
+	<div class="clear"></div>
+
+	<!-- Photo Form -->
+	<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Add a Photo</h4>
+	      </div>
+	      <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+	      <div class="modal-body">			
+			<%= f.input :caption %>
 	      </div>
 	      <div class="modal-footer">
 	        <%= f.submit "Submit", :class => 'btn btn-primary' %>
