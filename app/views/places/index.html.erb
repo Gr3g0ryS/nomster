@@ -1,6 +1,15 @@
 
 <% @places.each do |place| %>
   <div class= "booyah-box col-xs-10 col-xs-offset-1">
+  	<div class="row">
+  	<div class ="col-xs-12 col-md-4">
+  		<% if place.photos.present? %>
+  		<span class="thumbnail">
+			<%= image_tag place.photos.last.picture %>
+		</span>
+		<% end %>
+  	</div>
+  	<div class ="col-xs-12 col-md-8">
     <h1><%= link_to place.name, place_path(place) %></h1>
     <p><%= place.address %></p>
     <p><%= place.description %></p>
@@ -19,6 +28,8 @@
 			</div>
 		<% end %>
   </div>
+</div>
+</div>
 <% end %>
 <div class= "col-xs-10 col-xs-offset-1 text-right">
 	<%= will_paginate @places, :previous_label => 'Previous', :next_label => 'Next' %>
