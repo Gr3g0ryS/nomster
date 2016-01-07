@@ -19,11 +19,11 @@
 		<% if place.comments.present? %>
 			<div class="col-xs-12">
 				<blockquote>
-					<% if place.comments.last.humanized_rating.present? %>
-					<strong>(<%= place.comments.last.humanized_rating %>)</strong>
+					<% if place.comments.first.humanized_rating.present? %>
+					<strong>(<%= place.comments.first.humanized_rating %>)</strong>
 					<% end %>
-					<%= place.comments.last.message %>
-					<small><%= place.comments.last.user.email %></small>
+					<%= place.comments.first.message %>
+					<small><%= place.comments.first.user.email %></small>
 				</blockquote>
 			</div>
 		<% end %>
