@@ -1,35 +1,66 @@
+/* Repeating elements */
+
+$white: #fff;
+$ltgrey: #eee;
+$dkgrey: #666;
+$primary: #962d2d;
+$secondary: #4b7f35;
+$tertiary: #cbd600;
+$error: #ff3333;
+$headline: 'texgyreadventorregular', sans-serif;
+$headline-bold: 'texgyreadventorbold', sans-serif;
+$text: 'cardoregular', serif;
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
-	font-family: 'texgyreadventorregular', sans-serif;
+	font-family: $headline;
+	color: $primary;
 }
 
 h1, h2 {
 	padding-bottom: 15px;
+
 }
 
 body {
-	background-color: #ddd;
-	font-family: 'cardoregular', serif;
-	color: #000;
+	background-color: $primary;
+	font-family: $text;
+	color: $dkgrey;
+	padding-top: 75px;
+}
+
+hr {
+	border: 1px solid $primary;
 }
 
 .clear {
 	clear: both;
 }
 
+.well, .well-md, .well-lg {
+	background-color: $white;
+	border-color: $white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 a {
-	color: #3EDD67;
+	color: $primary;
 }
 
 a:hover {
-	color: #3E6136;
+	color: $secondary;
 	text-decoration: none;
 }
 
 label {
-	font-family: 'texgyreadventorregular';
-	color: #777;
+	font-family: $headline;
+	color: $dkgrey;
+	font-weight: 100;
 }
 
 .form-actions{
@@ -37,50 +68,59 @@ label {
 }
 
 .btn {
-	font-family: 'texgyreadventorbold';
+	font-family: $headline;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
+	border: none;
+}
+
+.btn:hover {
+	background-color: $tertiary;
+}
+
+.btn-primary {
+	background-color: $secondary;
+}
+
+.alert-info {
+border-radius: 0px;
+border: none;
+background-color: $white;
+color: $primary;
+}
+
+.btn-danger {
+	background-color: $primary;
 }
 
 .navbar.navbar-inverse {
-	background-color: #3EDD67;
+	background-color: $tertiary;
 	border-radius: 0;
-	box-shadow: 0 1px 3px #aaa;
 	border: none;
-	font-family: 'texgyreadventorregular';
-	color: #fff;
+	font-family: $headline;
+	color: $white;
 }
 
 .navbar-inverse .navbar-brand {
-	font-family: 'texgyreadventorbold';
-	color: #3E6136;
+	font-family: $headline-bold;
+	color: $primary;
 }
 
 .navbar-inverse .navbar-nav li a {
-	color: #3E6136;
+	color: $secondary;
 }
 
 .navbar-inverse .navbar-nav li a:hover {
-	color: #fff;
-}
-
-.booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 20px;
+	color: $white;
 }
 
 .pagination {
-  font-family: 'texgyreadventorregular', serif;
+  font-family: $headline;
 }
 
 .has-error {
-  color: #ff3333;
-  background-color: #FFEEEE;
+  color: $error;
+  background-color: $ltgrey;
   border-radius: 3px;
   padding:8px;
 }
@@ -91,8 +131,8 @@ label {
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  background: $tertiary;
+  border-left: 10px solid $primary;
   margin: 0.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -108,16 +148,11 @@ blockquote p {
 }
 
 .carousel-caption {
-	font-family: 'texgyreadventorregular';
+	font-family: $headline;
 	font-size: 60px;
 	font-weight: 100;
-	text-shadow: rgba(0,0,0,0.95) 2px 2px;
 	background-color: rgba(0,0,0,0.5);
 	width: 100%;
 	position: absolute;
 	left: 0;
-}
-
-.carousel {
-	box-shadow: 0px 3px 8px #2a2a2a;
 }
